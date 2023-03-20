@@ -1,4 +1,6 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable linebreak-style */
 /* istanbul ignore file */
 const pool = require('../src/Infrastructures/database/postgres/pool');
 
@@ -22,6 +24,7 @@ const AuthenticationsTableTestHelper = {
 
     return result.rows;
   },
+
   async cleanTable() {
     await pool.query('TRUNCATE TABLE authentications');
   },
