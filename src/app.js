@@ -1,3 +1,6 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable no-console */
+/* eslint-disable linebreak-style */
 require('dotenv').config();
 const createServer = require('./Infrastructures/http/createServer');
 const container = require('./Infrastructures/container');

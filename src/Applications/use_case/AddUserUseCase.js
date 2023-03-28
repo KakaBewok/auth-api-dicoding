@@ -14,12 +14,13 @@ class AddUserUseCase {
 
   async execute(useCasePayload) {
     const registerUser = new RegisterUser(useCasePayload);
-
+    // verifyAvailableUsername still abstrack
     await this._userRepository.verifyAvailableUsername(registerUser.username);
+    // hash() still abstrack
     registerUser.password = await this._passwordHash.hash(
       registerUser.password
     );
-
+    // addUser() still abstrack
     return this._userRepository.addUser(registerUser);
   }
 }
